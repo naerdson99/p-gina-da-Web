@@ -4,259 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Piece - O Rei dos Piratas</title>
-    <style>
-        /* Reset de margens e configuração geral */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-        }
-
-        body {
-            background-color: #121214;
-            color: #e1e1e6;
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        /* Container principal para centralizar */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* Estilo do Cabeçalho */
-        header {
-            text-align: center;
-            padding: 30px 10px;
-            background: linear-gradient(135deg, #cc0000 0%, #770000 100%);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            color: #ffffff;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        }
-
-        header h2 {
-            font-size: 1.2rem;
-            color: #ffcc00;
-            font-weight: 500;
-            margin-top: 5px;
-        }
-
-        /* Citação de Gold Roger */
-        blockquote {
-            background-color: #1a1a1e;
-            padding: 20px;
-            border-left: 5px solid #ffcc00;
-            border-radius: 8px;
-            margin: 25px 0;
-            font-style: italic;
-            color: #a8a8b3;
-        }
-
-        blockquote p {
-            margin-bottom: 10px;
-        }
-
-        blockquote p strong {
-            color: #ffcc00;
-        }
-
-        blockquote p em {
-            color: #ffffff;
-        }
-
-        /* Seções do Conteúdo */
-        section {
-            background-color: #1a1a1e;
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            border: 1px solid #29292e;
-        }
-
-        section h3 {
-            font-size: 1.6rem;
-            color: #ff4d4d;
-            border-bottom: 2px solid #29292e;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-        }
-
-        .about-text {
-            font-size: 1.05rem;
-            color: #c4c4cc;
-        }
-
-        /* Grid dos Personagens (Cards) */
-        .crew-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            list-style: none;
-            padding: 0;
-            margin-top: 15px;
-        }
-
-        .crew-card {
-            background-color: #202024;
-            border: 1px solid #29292e;
-            border-radius: 8px;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .crew-card:hover {
-            transform: translateY(-4px);
-            border-color: #ffcc00;
-        }
-
-        .crew-icon {
-            font-size: 1.8rem;
-        }
-
-        .crew-info strong {
-            display: block;
-            color: #ffffff;
-            font-size: 1.05rem;
-        }
-
-        .crew-info span {
-            color: #ffcc00;
-            font-size: 0.85rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        /* Rodapé */
-        footer {
-            text-align: center;
-            color: #7c7c8a;
-            font-size: 0.9rem;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #29292e;
-        }
-    </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Cabeçalho com a narração icônica -->
-        <header>
-            <h1>🏴‍☠️ ONE PIECE</h1>
-            <h2>A Grande Era dos Piratas</h2>
-        </header>
-
-        <!-- Citação Principal -->
-        <blockquote style="background-color: #1a1a1e; padding: 20px; border-left: 5px solid #ffcc00; border-radius: 8px; margin-bottom: 30px;">
-            <p>Riquezas, fama, poder... Um homem conquistou tudo o que o mundo tinha a oferecer: o Rei dos Piratas, <strong>Gold Roger</strong>.</p>
+    <header>
+        <h1>🏴‍☠️ ONE PIECE</h1>
+        <h2>A Grande Era dos Piratas</h2>
+        
+        <blockquote style="background-color: #f4f4f4; padding: 15px; border-left: 4px solid #c8963e; margin: 20px 0;">
+            <p>Riquezas, fama, poder... Um homem conquistou tudo o que o mundo tinha a oferecer: o Rei dos Piratas, Gold Roger.</p>
             <p>Antes de ser executado, suas últimas palavras levaram a multidão ao mar:</p>
             <p><em>"— Querem o meu tesouro? Fiquem à vontade para pegar! Procurem!! Nele está tudo o que esse mundo pode dar a vocês!"</em></p>
             <p>Homens cheios de esperança partiram em busca desse tesouro do sonho em direção à Grand Line, e assim teve início a grande era dos piratas!</p>
         </blockquote>
+    </header>
 
-        <main>
-            <!-- Seção de Apresentação -->
-            <section>
-                <h3>Sobre a História</h3>
-                <p class="about-text">
-                    Nesse mundo de navegação e aventuras, acompanhamos <strong>Monkey D. Luffy</strong>, um jovem pirata feito de borracha que junta uma tripulação para navegar pela perigosa Grand Line em busca do tesouro supremo, o One Piece!
-                </p>
-            </section>
+    <main>
+        <section>
+            <h3>Sobre a História</h3>
+            <p>
+                Nesse mundo de navegação e aventuras, acompanhamos <strong>Monkey D. Luffy</strong>, um jovem pirata feito de borracha que junta uma tripulação para navegar pela perigosa Grand Line em busca do tesouro supremo, o One Piece!
+            </p>
+        </section>
 
-            <!-- Seção do Bando em estilo Cards -->
-            <section>
-                <h3>O Bando dos Chapéus de Palha</h3>
-                <ul class="crew-grid">
-                    <li class="crew-card">
-                        <span class="crew-icon">👒</span>
-                        <div class="crew-info">
-                            <strong>Monkey D. Luffy</strong>
-                            <span>Capitão</span>
-                        </div>
-                    </li>
-                    <li class="crew-card">
-                        <span class="crew-icon">⚔️</span>
-                        <div class="crew-info">
-                            <strong>Roronoa Zoro</strong>
-                            <span>Espadachim</span>
-                        </div>
-                    </li>
-                    <li class="crew-card">
-                        <span class="crew-icon">🍊</span>
-                        <div class="crew-info">
-                            <strong>Nami</strong>
-                            <span>Navegadora</span>
-                        </div>
-                    </li>
-                    <li class="crew-card">
-                        <span class="crew-icon">🎯</span>
-                        <div class="crew-info">
-                            <strong>Usopp</strong>
-                            <span>Atirador</span>
-                        </div>
-                    </li>
-                    <li class="crew-card">
-                        <span class="crew-icon">🍳</span>
-                        <div class="crew-info">
-                            <strong>Sanji</strong>
-                            <span>Cozinheiro</span>
-                        </div>
-                    </li>
-                    <li class="crew-card">
-                        <span class="crew-icon">🌸</span>
-                        <div class="crew-info">
-                            <strong>Tony Tony Chopper</strong>
-                            <span>Médico</span>
-                        </div>
-                    </li>
-                    <li class="crew-card">
-                        <span class="crew-icon">📖</span>
-                        <div class="crew-info">
-                            <strong>Nico Robin</strong>
-                            <span>Arqueóloga</span>
-                        </div>
-                    </li>
-                    <li class="crew-card">
-                        <span class="crew-icon">🤖</span>
-                        <div class="crew-info">
-                            <strong>Franky</strong>
-                            <span>Carpinteiro</span>
-                        </div>
-                    </li>
-                    <li class="crew-card">
-                        <span class="crew-icon">🎻</span>
-                        <div class="crew-info">
-                            <strong>Brook</strong>
-                            <span>Músico</span>
-                        </div>
-                    </li>
-                    <li class="crew-card">
-                        <span class="crew-icon">🦈</span>
-                        <div class="crew-info">
-                            <strong>Jinbe</strong>
-                            <span>Timoneiro</span>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </main>
-
-        <footer>
-            <p>Desenvolvido para fins de aprendizado em HTML e CSS.</p>
-        </footer>
-    </div>
+        <section>
+            <h3>O Bando dos Chapéus de Palha</h3>
+            <ul>
+                <li><strong>Monkey D. Luffy</strong> - Capitão</li>
+                <li><strong>Roronoa Zoro</strong> - Espadachim</li>
+                <li><strong>Nami</strong> - Navegadora</li>
+                <li><strong>Usopp</strong> - Atirador</li>
+                <li><strong>Sanji</strong> - Cozinheiro</li>
+                <li><strong>Tony Tony Chopper</strong> - Médico</li>
+                <li><strong>Nico Robin</strong> - Arqueóloga</li>
+                <li><strong>Franky</strong> - Carpinteiro</li>
+                <li><strong>Brook</strong> - Músico</li>
+                <li><strong>Jinbe</strong> - Timoneiro</li>
+            </ul>
+        </section>
+    </main>
 
 </body>
 </html>
