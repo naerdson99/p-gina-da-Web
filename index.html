@@ -3,287 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Pirata Extremo - One Piece</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Impact', 'Arial Black', sans-serif;
-        }
-
-        body {
-            background-color: #0b0c10;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .game-panel {
-            background: radial-gradient(circle, #1f1f2e 0%, #0f0f14 100%);
-            border: 4px solid #ffcc00;
-            border-radius: 20px;
-            max-width: 900px;
-            width: 100%;
-            padding: 30px;
-            box-shadow: 0 0 30px rgba(255, 204, 0, 0.3);
-            text-align: center;
-        }
-
-        .game-title {
-            font-size: 2.5rem;
-            color: #ffcc00;
-            text-shadow: 3px 3px 0px #ff0000;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .score-bar {
-            background-color: #222;
-            border-radius: 10px;
-            padding: 8px;
-            margin: 20px auto;
-            max-width: 300px;
-            border: 2px solid #555;
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .question-box {
-            background-color: rgba(0, 0, 0, 0.6);
-            border-left: 5px solid #00ffff;
-            padding: 20px;
-            border-radius: 8px;
-            font-family: 'Arial', sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            text-align: left;
-            min-height: 80px;
-        }
-
-        .options-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
-        }
-
-        .option-card {
-            background-color: #15161e;
-            border: 3px solid #3f4257;
-            border-radius: 15px;
-            padding: 18px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            position: relative;
-        }
-
-        .option-card:hover {
-            transform: scale(1.02);
-            border-color: #00ffff;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
-        }
-
-        .option-letter {
-            font-size: 2rem;
-            color: #ffcc00;
-            margin-right: 15px;
-            text-shadow: 2px 2px 0px #000;
-        }
-
-        .option-text {
-            font-size: 1.3rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* Classes de feedback */
-        .correct {
-            background-color: #0c3821 !important;
-            border-color: #00ff66 !important;
-            box-shadow: 0 0 20px rgba(0, 255, 102, 0.6) !important;
-        }
-        .correct::after { content: "✓"; position: absolute; right: 20px; color: #00ff66; font-size: 1.5rem; }
-
-        .wrong {
-            background-color: #3d1212 !important;
-            border-color: #ff3333 !important;
-            box-shadow: 0 0 20px rgba(255, 51, 51, 0.6) !important;
-        }
-        .wrong::after { content: "✗"; position: absolute; right: 20px; color: #ff3333; font-size: 1.5rem; }
-
-        #game-feedback {
-            margin-top: 25px;
-            font-size: 1.5rem;
-            min-height: 40px;
-            text-shadow: 2px 2px 0px #000;
-        }
-
-        /* Botão de avançar */
-        .next-btn {
-            background-color: #ffcc00;
-            color: #000;
-            border: none;
-            padding: 12px 30px;
-            font-size: 1.2rem;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 20px;
-            display: none;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .next-btn:hover { background-color: #ffaa00; }
-    </style>
+    <title>One Piece - O Rei dos Piratas</title>
 </head>
 <body>
 
-    <div class="game-panel">
-        <h1 class="game-title">☠️ QUIZ PIRATA ☠️</h1>
+    <header>
+        <h1>🏴‍☠️ ONE PIECE</h1>
+        <h2>A Grande Era dos Piratas</h2>
+        
+        <blockquote style="background-color: #f4f4f4; padding: 15px; border-left: 4px solid #c8963e; margin: 20px 0;">
+            <p>Riquezas, fama, poder... Um homem conquistou tudo o que o mundo tinha a oferecer: o Rei dos Piratas, Gold Roger.</p>
+            <p>Antes de ser executado, suas últimas palavras levaram a multidão ao mar:</p>
+            <p><em>"— Querem o meu tesouro? Fiquem à vontade para pegar! Procurem!! Nele está tudo o que esse mundo pode dar a vocês!"</em></p>
+            <p>Homens cheios de esperança partiram em busca desse tesouro do sonho em direção à Grand Line, e assim teve início a grande era dos piratas!</p>
+        </blockquote>
+    </header>
 
-        <div class="score-bar">
-            PONTOS: <span id="score-txt" style="color: #ffcc00;">0</span> / 3
-        </div>
+    <main>
+        <section>
+            <h3>Sobre a História</h3>
+            <p>
+                Nesse mundo de navegação e aventuras, acompanhamos <strong>Monkey D. Luffy</strong>, um jovem pirata feito de borracha que junta uma tripulação para navegar pela perigosa Grand Line em busca do tesouro supremo, o One Piece!
+            </p>
+        </section>
 
-        <div class="question-box" id="question-text">
-            </div>
-
-        <div class="options-grid" id="options-box">
-            </div>
-
-        <div id="game-feedback"></div>
-        <button class="next-btn" id="next-button" onclick="nextQuestion()">Próxima Pergunta ➔</button>
-    </div>
-
-    <script>
-        // Banco de perguntas do Quiz
-        const quizData = [
-            {
-                num: 1,
-                question: "Quem foi o primeiro integrante a se juntar oficialmente ao bando do Luffy?",
-                options: ["Nami", "Zoro", "Usopp", "Sanji"],
-                correct: "Zoro"
-            },
-            {
-                num: 2,
-                question: "Qual é o nome da Akuma no Mi (Fruta do Diabo) que o Luffy comeu?",
-                options: ["Goro Goro no Mi", "Mera Mera no Mi", "Gomu Gomu no Mi", "Hito Hito no Mi"],
-                correct: "Gomu Gomu no Mi"
-            },
-            {
-                num: 3,
-                question: "Qual é o grande sonho do Luffy desde o começo da história?",
-                options: ["Ser o melhor espadachim", "Se tornar o Rei dos Piratas", "Achar o All Blue", "Mapear o mundo todo"],
-                correct: "Se tornar o Rei dos Piratas"
-            }
-        ];
-
-        let currentQuestionIndex = 0;
-        let score = 0;
-        let canClick = true;
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-
-        // Inicializa o jogo
-        loadQuestion();
-
-        function loadQuestion() {
-            canClick = true;
-            document.getElementById('next-button').style.display = 'none';
-            document.getElementById('game-feedback').innerHTML = '';
-            
-            const currentData = quizData[currentQuestionIndex];
-            document.getElementById('question-text').innerHTML = `<strong>DESAFIO ${currentData.num}:</strong> ${currentData.question}`;
-            
-            const optionsBox = document.getElementById('options-box');
-            optionsBox.innerHTML = '';
-
-            const letters = ['A', 'B', 'C', 'D'];
-            currentData.options.forEach((opt, index) => {
-                optionsBox.innerHTML += `
-                    <div class="option-card" onclick="checkChoice(this, '${opt}')">
-                        <span class="option-letter">${letters[index]})</span>
-                        <span class="option-text">${opt}</span>
-                    </div>
-                `;
-            });
-        }
-
-        function checkChoice(element, selectedAnswer) {
-            if (!canClick) return;
-            canClick = false;
-
-            const currentData = quizData[currentQuestionIndex];
-            const feedback = document.getElementById('game-feedback');
-            const scoreText = document.getElementById('score-txt');
-            const allCards = document.querySelectorAll('.option-card');
-
-            if (selectedAnswer === currentData.correct) {
-                element.classList.add('correct');
-                feedback.innerHTML = "🏆 MANDOU BEM! RESPOSTA CORRETA!";
-                feedback.style.color = "#00ff66";
-                score++;
-                scoreText.innerText = score;
-                playSound(true);
-            } else {
-                element.classList.add('wrong');
-                feedback.innerHTML = `☠️ ERROU! A resposta certa era ${currentData.correct}.`;
-                feedback.style.color = "#ff3333";
-                playSound(false);
-
-                // Mostra onde estava a certa
-                allCards.forEach(card => {
-                    if (card.querySelector('.option-text').innerText === currentData.correct.toUpperCase()) {
-                        card.classList.add('correct');
-                    }
-                });
-            }
-
-            document.getElementById('next-button').style.display = 'inline-block';
-        }
-
-        function nextQuestion() {
-            currentQuestionIndex++;
-            if (currentQuestionIndex < quizData.length) {
-                loadQuestion();
-            } else {
-                // Fim de jogo
-                document.getElementById('question-text').innerHTML = "<strong>FIM DO DESAFIO!</strong>";
-                document.getElementById('options-box').innerHTML = '';
-                document.getElementById('next-button').style.display = 'none';
-                
-                const feedback = document.getElementById('game-feedback');
-                if (score === 3) {
-                    feedback.innerHTML = `👑 INCRÍVEL! Você acertou todas (${score}/3) e se tornou o novo Rei dos Piratas!`;
-                    feedback.style.color = "#ffcc00";
-                } else {
-                    feedback.innerHTML = `⚓ Fim de jogo! Você fez ${score} de 3 pontos. Recarregue a página para tentar de novo!`;
-                    feedback.style.color = "#00ffff";
-                }
-            }
-        }
-
-        function playSound(success) {
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            osc.connect(gain);
-            gain.connect(audioCtx.destination);
-            if (success) {
-                osc.frequency.setValueAtTime(450, audioCtx.currentTime);
-                osc.frequency.setValueAtTime(650, audioCtx.currentTime + 0.1);
-                gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
-                osc.start(); osc.stop(audioCtx.currentTime + 0.25);
-            } else {
-                osc.frequency.setValueAtTime(170, audioCtx.currentTime);
-                gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
-                osc.start(); osc.stop(audioCtx.currentTime + 0.3);
-            }
-        }
-    </script>
+        <section>
+            <h3>O Bando dos Chapéus de Palha</h3>
+            <ul>
+                <li><strong>Monkey D. Luffy</strong> - Capitão</li>
+                <li><strong>Roronoa Zoro</strong> - Espadachim</li>
+                <li><strong>Nami</strong> - Navegadora</li>
+                <li><strong>Usopp</strong> - Atirador</li>
+                <li><strong>Sanji</strong> - Cozinheiro</li>
+                <li><strong>Tony Tony Chopper</strong> - Médico</li>
+                <li><strong>Nico Robin</strong> - Arqueóloga</li>
+                <li><strong>Franky</strong> - Carpinteiro</li>
+                <li><strong>Brook</strong> - Músico</li>
+                <li><strong>Jinbe</strong> - Timoneiro</li>
+            </ul>
+        </section>
+    </main>
 
 </body>
 </html>
